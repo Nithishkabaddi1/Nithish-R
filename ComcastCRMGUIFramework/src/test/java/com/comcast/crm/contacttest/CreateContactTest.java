@@ -74,7 +74,7 @@ public class CreateContactTest extends BaseClass {
 
 	}
 
-/*	@Test(groups = "Regression Testing")
+	@Test(groups = "Regression Testing")
 	public void createContactWithSupportDateTest() throws Throwable {
 
 		String lastName = elib.getDataFromExcelFile("contact", 1, 2) + jlib.getRandomNumber();
@@ -151,5 +151,5 @@ public class CreateContactTest extends BaseClass {
 			System.out.println(lastname + "contact successfully created");
 		
 		
-	}*/
+	}
 }

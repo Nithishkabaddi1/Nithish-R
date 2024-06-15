@@ -49,13 +49,19 @@ public class BaseClass {
 		System.out.println("==connect to DB, Report Config==");
 	}
 	
-	//@Parameters("BROWSER")
+	//@Parameters("BROWSER")//only for cross browser execution for others we should remove this
 	@BeforeClass(groups = {"Smoke Testing","Regression Testing"})
+	
 	public void configBC() throws Throwable {
 		String BROWSER=flib.getDataFromPropertyFile("browser");
+		
+		//to pass parameter in run time
+		//String BROWSER=System.getProperty("browser");
 	
+	//only for cross browser execution
+	//For others we use below method
 	//public void configBC(String browser) {
-	//	String BROWSER=browser;
+		//String BROWSER=browser;
 		
 		if(BROWSER.equals("chrome"))
 		{
@@ -76,11 +82,19 @@ public class BaseClass {
 				
 				UtilityClassObject.setTest(driver);
 		
-		System.out.println("==Launch the Browser==");
+		System.out.println(BROWSER+" ==Launch the Browser==");
 	}
 	
 	@BeforeMethod(groups = {"Smoke Testing","Regression Testing"})
 	public void configBM() throws Throwable {
+		
+		//to pass parameter in run time
+		
+		//String URL = System.getProperty("url");
+		//String USERNAME=System.getProperty("username");
+	//	String PASSWORD=System.getProperty("password");
+		
+		
 		String URL = flib.getDataFromPropertyFile("url");
 		String USERNAME=flib.getDataFromPropertyFile("username");
 		String PASSWORD=flib.getDataFromPropertyFile("password");

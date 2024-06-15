@@ -23,8 +23,8 @@ public class CreateOrganizationTest extends BaseClass {
 	  HomePage hp=new HomePage(driver); 
 	  hp.getOrgLink().click();
 	  
-//	  OrganizationPage op=new OrganizationPage(driver);
-//	  op.getCreateOrgLookUpImg().click();
+	  OrganizationPage op=new OrganizationPage(driver);
+	  op.getCreateOrgLookUpImg().click();
 	  
 	  String orgName = elib.getDataFromExcelFile("org",1,2)+jlib.getRandomNumber();
 	  //System.out.println(orgName);
@@ -40,6 +40,7 @@ public class CreateOrganizationTest extends BaseClass {
 	  boolean status = headerInfo.contains(orgName);
 	  Assert.assertEquals(status, true);
 	  UtilityClassObject.getTest().log(Status.INFO,orgName+" Organization successfully created"); 
+	 System.out.println(orgName+" Organization successfully created");
 	  }
 	 
 	@Test(groups = "Regression Testing")
@@ -63,6 +64,7 @@ public class CreateOrganizationTest extends BaseClass {
 		SoftAssert Sassert=new SoftAssert();
 		Sassert.assertTrue(status);
 		UtilityClassObject.getTest().log(Status.INFO,industry + "information is verified==PASS");
+		System.out.println(industry + "information is verified==PASS");
 			Sassert.assertAll();
 		} 
 
@@ -91,6 +93,7 @@ public class CreateOrganizationTest extends BaseClass {
 		SoftAssert Sassert=new SoftAssert();
 		Sassert.assertTrue(status);
 		UtilityClassObject.getTest().log(Status.INFO,phone+" information is verified==PASS");
+		System.out.println(phone+" information is verified==PASS");
 		
 			Sassert.assertAll();
 	}

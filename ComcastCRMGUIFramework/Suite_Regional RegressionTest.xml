@@ -8,11 +8,6 @@
 				<include name="createContactWithOrg"/>
 			</methods>
 		</class>
-			<class name="com.comcast.crm.organizationTest.CreateOrganizationTest">
-			<methods>
-				<include name="CreateOrganizationWithPhoneTest"/>
-			</methods>
-		</class>
 		</classes>
 	</test> <!-- Test -->
 </suite> <!-- Suite -->
