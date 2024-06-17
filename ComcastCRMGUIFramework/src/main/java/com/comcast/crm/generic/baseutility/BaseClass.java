@@ -59,7 +59,6 @@ public class BaseClass {
 		//String BROWSER=System.getProperty("browser");
 	
 	//only for cross browser execution
-	//For others we use below method
 	//public void configBC(String browser) {
 		//String BROWSER=browser;
 		

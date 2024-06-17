@@ -35,7 +35,8 @@ import com.comcast.crm.objectrepository.OrganizationInfoPage;
 import com.comcast.crm.objectrepository.OrganizationPage;
 
 public class CreateContactTest extends BaseClass {
-
+//
+	//changes
 	@Test(groups = "Smoke Testing")
 	public void createContactTest() throws Throwable {
 
