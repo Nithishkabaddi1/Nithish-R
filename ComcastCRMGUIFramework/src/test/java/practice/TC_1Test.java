@@ -1,7 +1,11 @@
 package practice;
 
-public class TC_1 {
-public static void main(String[] args) {
+import org.testng.annotations.Test;
+
+public class TC_1Test {
+	@Test
+	
+public void practiceGitTest() {
 	 System.out.println("practice for git");
 	 System.out.println("TC_1 Updated");
 }
